@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>VACCS</title>
-<link rel="canonical" href="https://stevenmcarr.github.io/vaccs/">
-<meta http-equiv="refresh" content="0; url=https://stevenmcarr.github.io/vaccs/">
-<script>location.replace("https://stevenmcarr.github.io/vaccs/");</script>
+<script>
+// Old links like /irvis/login go to that tool's install page; anything else
+// goes to the VACCS page.
+(function () {
+  var base = "https://stevenmcarr.github.io/vaccs/";
+  var tools = {irvis: "irvis", iris: "irvis", eevis: "eevis", scvis: "scvis"};
+  var first = location.pathname.split("/")[1].toLowerCase();
+  location.replace(tools[first] ? base + tools[first] + "-install.html" : base);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://stevenmcarr.github.io/vaccs/"></noscript>
 </head>
 <body>
 <p>VACCS has moved to <a href="https://stevenmcarr.github.io/vaccs/">stevenmcarr.github.io/vaccs</a>.</p>
