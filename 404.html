@@ -8,7 +8,7 @@
 // goes to the VACCS page.
 (function () {
   var base = "https://stevenmcarr.github.io/vaccs/";
-  var tools = {irvis: "irvis", iris: "irvis", eevis: "eevis", scvis: "scvis"};
+  var tools = {irvis: "irvis", eevis: "eevis", scvis: "scvis"};
   var first = location.pathname.split("/")[1].toLowerCase();
   location.replace(tools[first] ? base + tools[first] + "-install.html" : base);
 })();
